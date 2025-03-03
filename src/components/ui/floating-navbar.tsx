@@ -36,7 +36,7 @@ export const FloatingNav = ({
     <AnimatePresence mode='wait'>
       <motion.div
         className={cn(
-          'w-full fixed py-1 top-1 border-b border-b-[#252529] rounded bg-18181b shadow-lg z-[5000]',
+          'w-full fixed py-1 top-0 border-b border-b-[#252529] rounded bg-18181b shadow-lg z-[5000]',
           isScrolled ? 'backdrop-blur-md' : 'backdrop-blur-none',
           className
         )}
