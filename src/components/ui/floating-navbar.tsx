@@ -30,18 +30,18 @@ export const FloatingNav = ({
     setIsScrolled(latest > 10);
   });
 
-  console.log(pathname)
-
   return (
     <AnimatePresence mode='wait'>
       <motion.div
         className={cn(
-          'w-full fixed py-1 top-0 border-b border-b-[#252529] rounded bg-18181b shadow-lg z-[5000]',
-          isScrolled ? 'backdrop-blur-md' : 'backdrop-blur-none',
+          'w-fit mx-auto fixed top-1 md:top-0 inset-x-0 rounded-full bg-18181b z-[5000] py-2 transition-all duration-100',
+          isScrolled
+            ? 'backdrop-blur-md border border-[#252529] md:w-1/2 md:top-1 md:rounded-full'
+            : 'backdrop-blur-none border border-transparent md:w-full md:rounded-none',
           className
         )}
       >
-        <div className='flex max-w-3xl inset-x-0 mx-auto  px-8 py-3 items-center justify-center md:justify-between space-x-4 transition-all duration-300'>
+        <div className='flex max-w-3xl inset-x-0 mx-auto px-8 py-3 items-center justify-center md:justify-between space-x-4'>
           <Link href={'/'} className='hidden md:block'>
             <Image
               src={'/assets/logo-white.svg'}
@@ -57,7 +57,7 @@ export const FloatingNav = ({
                 href={navItem.link}
                 className={cn(
                   'text-neutral-50 hover:text-neutral-300 px-2',
-                  pathname == navItem.link
+                  pathname === navItem.link
                     ? 'underline underline-offset-2 text-white'
                     : ''
                 )}

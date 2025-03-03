@@ -1,15 +1,23 @@
 import GithubCalendar from '@/components/atoms/GithubCalendar';
+import { Spotlight } from '@/components/ui/spotlight';
+import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 import Image from 'next/image';
 import React from 'react';
 
 const Hero = () => {
+  const words=`Front End Developer`
   return (
     <section>
+      <Spotlight
+        className="-top-28 -left-20 md:left-60 md:-top-20"
+        fill="white"
+      />
       <div className='flex justify-between flex-col-reverse md:flex-row'>
         <div className='mt-8 md:mt-4 space-y-5 md:w-2/3'>
           <div>
             <h1 className='text-2xl font-bold text-white'>M Rayhan Rohadi</h1>
-            <p className={`text-sm font-mono`}>Front End Developer</p>
+            {/* <p className={`text-sm font-mono`}>Front End Developer</p> */}
+            <TextGenerateEffect words={words} duration={1} />
           </div>
           <p>
             I&#39;m a front end developer specializing in building responsive

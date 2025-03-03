@@ -1,6 +1,7 @@
 import Divider from '@/components/atoms/Divider';
 import About from '@/components/molecules/Home/About';
 import Hero from '@/components/molecules/Home/Hero';
+import Projects from '@/components/molecules/Home/Projects';
 import React from 'react';
 
 const Home = () => {
@@ -9,6 +10,8 @@ const Home = () => {
       <Hero />
       <Divider />
       <About />
+      <Divider />
+      <Projects />
     </>
   );
 };
