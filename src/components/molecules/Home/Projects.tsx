@@ -1,4 +1,5 @@
-import { IconLink } from '@tabler/icons-react';
+import HeaderSection from '@/components/atoms/HeaderSection';
+import { LinkIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -15,19 +16,27 @@ export default function Projects() {
       tags: ['NextJS', 'Tailwind'],
       link: 'https://mrayhanr.my.id',
     },
+    {
+      id: 2,
+      label: 'Personal Website',
+      image: 'personal-web.png',
+      tech: 'typescript',
+      summary:
+        'a digital space that showcases my best works, backgrounds, etc.',
+      tags: ['NextJS', 'Tailwind'],
+      link: 'https://mrayhanr.my.id',
+    },
   ];
 
   return (
     <section>
-      <h2 className='text-2xl font-semibold relative flex group cursor-pointer mb-5 w-fit items-center'>
-        Projects
-      </h2>
+      <HeaderSection text='projects' />
       <div className='grid gap-2'>
         {project.map((p) => {
           return (
             <div
               key={p.id}
-              className='border border-[#252529] bg-[#141417] rounded-xl sm:flex items-center'
+              className='border border-[#252529] bg-[#141417] rounded-xl sm:flex items-center mt-2'
             >
               <div className='p-2'>
                 <Image
@@ -40,13 +49,13 @@ export default function Projects() {
               </div>
               <div className='p-3 w-full'>
                 <div className='flex justify-between items-center'>
-                  <h1 className='text-2xl font-black'>{p.label}</h1>
+                  <h3 className='text-lg font-black'>{p.label}</h3>
                   <Link
                     target='_blank'
                     href={p.link}
                     className='border border-[#252529] bg-[#18181b] hover:bg-[#1f1f24] duration-200 px-5 py-2 flex items-center rounded-lg text-zinc-400 gap-2 text-sm'
                   >
-                    <IconLink className='h-4 w-4 text-neutral-500' /> Preview
+                    <LinkIcon className='h-3 w-3 text-neutral-500' /> Preview
                   </Link>
                 </div>
                 <hr className='border-1 border-[#252529] border-dashed my-3' />
@@ -56,7 +65,7 @@ export default function Projects() {
                       return (
                         <li
                           key={t}
-                          className='text-sm bg-[#18181b] border border-[#252529] rounded px-1 py-0.5 text-zinc-500 font-mono w-fit'
+                          className='text-xs bg-[#18181b] border border-[#252529] rounded px-1 py-0.5 text-zinc-500 font-mono w-fit'
                         >
                           # {t}
                         </li>
@@ -67,7 +76,7 @@ export default function Projects() {
                   <p className='opacity-50 text-sm'>{p.tech}</p>
                 </div>
                 <hr className='border-1 border-[#252529] border-dashed my-3' />
-                <p className=''>{p.summary}</p>
+                <p className='text-sm'>{p.summary}</p>
               </div>
             </div>
           );

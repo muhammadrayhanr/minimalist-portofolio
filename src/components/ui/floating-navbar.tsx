@@ -34,14 +34,14 @@ export const FloatingNav = ({
     <AnimatePresence mode='wait'>
       <motion.div
         className={cn(
-          'w-fit mx-auto fixed top-1 md:top-0 inset-x-0 rounded-full bg-18181b z-[5000] py-2 transition-all duration-100',
+          'w-fit mx-auto fixed top-3 md:top-0 inset-x-0 rounded-full bg-18181b z-[5000] py-2 transition-all duration-100',
           isScrolled
-            ? 'backdrop-blur-md border border-[#252529] md:w-1/2 md:top-1 md:rounded-full'
+            ? 'backdrop-blur-md border border-[#252529] md:w-1/3 md:top-1 md:rounded-full'
             : 'backdrop-blur-none border border-transparent md:w-full md:rounded-none',
           className
         )}
       >
-        <div className='flex max-w-3xl inset-x-0 mx-auto px-8 py-3 items-center justify-center md:justify-between space-x-4'>
+        <div className='flex max-w-3xl inset-x-0 mx-auto px-8 py-3 space-x-1 items-center justify-center md:justify-between'>
           <Link href={'/'} className='hidden md:block'>
             <Image
               src={'/assets/logo-white.svg'}
@@ -50,13 +50,13 @@ export const FloatingNav = ({
               height={25}
             />
           </Link>
-          <div className='relative items-center flex space-x-1'>
+          <div className='relative items-center flex'>
             {navItems.map((navItem, idx: number) => (
               <Link
                 key={`link=${idx}`}
                 href={navItem.link}
                 className={cn(
-                  'text-neutral-50 hover:text-neutral-300 px-2',
+                  'text-neutral-50 hover:text-neutral-300 px-4 md:px-3',
                   pathname === navItem.link
                     ? 'underline underline-offset-2 text-white'
                     : ''

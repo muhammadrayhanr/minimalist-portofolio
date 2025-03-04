@@ -62,6 +62,7 @@ module.exports = {
       },
       animation: {
         spotlight: 'spotlight 2s ease .75s 1 forwards',
+        shine: 'shine 5s linear infinite',
       },
       keyframes: {
         spotlight: {
@@ -73,6 +74,10 @@ module.exports = {
             opacity: 1,
             transform: 'translate(-50%,-40%) scale(1)',
           },
+        },
+        shine: {
+          '0%': { 'background-position': '100%' },
+          '100%': { 'background-position': '-100%' },
         },
       },
     },
