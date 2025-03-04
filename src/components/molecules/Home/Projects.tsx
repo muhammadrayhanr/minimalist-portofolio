@@ -38,7 +38,7 @@ export default function Projects() {
               key={p.id}
               className='border border-[#252529] bg-[#141417] rounded-xl sm:flex items-center mt-2'
             >
-              <div className='p-2'>
+              <div className='flex justify-center p-2'>
                 <Image
                   src={`/assets/${p.image}`}
                   alt='mockup'

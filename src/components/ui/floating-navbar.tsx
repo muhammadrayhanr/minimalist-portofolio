@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, JSX } from 'react';
+import React, { useState } from 'react';
 import {
   motion,
   AnimatePresence,
@@ -18,7 +18,7 @@ export const FloatingNav = ({
   navItems: {
     name: string;
     link: string;
-    icon?: JSX.Element;
+    icon?: React.ElementType;
   }[];
   className?: string;
 }) => {
@@ -62,7 +62,7 @@ export const FloatingNav = ({
                     : ''
                 )}
               >
-                <span className='block sm:hidden'>{navItem.icon}</span>
+                {navItem.icon && React.createElement(navItem.icon, { className: 'w-5 h-5 block sm:hidden' })}
                 <span className='hidden sm:block text-sm'>{navItem.name}</span>
               </Link>
             ))}

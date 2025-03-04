@@ -1,5 +1,4 @@
 import GithubCalendar from '@/components/atoms/GithubCalendar';
-import ShimmerText from '@/components/atoms/ShimmerText';
 import { Spotlight } from '@/components/ui/spotlight';
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 import Image from 'next/image';
@@ -36,12 +35,7 @@ const Hero = () => {
             />
             <div className='absolute top-0 -rotate-12'>
               <div className='px-1 bg-[#26A641] w-fit rounded-sm border-[2.5px] border-[#006D32] '>
-                <ShimmerText
-                  text='heya!'
-                  disabled={false}
-                  speed={2}
-                  className='text-sm cursor-pointer'
-                />
+                heya!
               </div>
             </div>
           </div>
