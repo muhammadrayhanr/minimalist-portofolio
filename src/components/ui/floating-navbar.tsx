@@ -62,7 +62,10 @@ export const FloatingNav = ({
                     : ''
                 )}
               >
-                {navItem.icon && React.createElement(navItem.icon, { className: 'w-5 h-5 block sm:hidden' })}
+                {navItem.icon &&
+                  React.createElement(navItem.icon, {
+                    className: 'w-5 h-5 block sm:hidden',
+                  })}
                 <span className='hidden sm:block text-sm'>{navItem.name}</span>
               </Link>
             ))}

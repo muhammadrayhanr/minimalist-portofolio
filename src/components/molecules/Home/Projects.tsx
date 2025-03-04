@@ -1,38 +1,16 @@
 import HeaderSection from '@/components/atoms/HeaderSection';
+import { projectItems } from '@/lib/mock';
 import { LinkIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 export default function Projects() {
-  const project = [
-    {
-      id: 1,
-      label: 'Personal Website',
-      image: 'personal-web.png',
-      tech: 'typescript',
-      summary:
-        'a digital space that showcases my best works, backgrounds, etc.',
-      tags: ['NextJS', 'Tailwind'],
-      link: 'https://mrayhanr.my.id',
-    },
-    {
-      id: 2,
-      label: 'Personal Website',
-      image: 'personal-web.png',
-      tech: 'typescript',
-      summary:
-        'a digital space that showcases my best works, backgrounds, etc.',
-      tags: ['NextJS', 'Tailwind'],
-      link: 'https://mrayhanr.my.id',
-    },
-  ];
-
   return (
     <section>
       <HeaderSection text='projects' />
       <div className='grid gap-2'>
-        {project.map((p) => {
+        {projectItems.map((p) => {
           return (
             <div
               key={p.id}

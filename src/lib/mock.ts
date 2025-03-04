@@ -1,4 +1,12 @@
-import { Github, Linkedin, Instagram, Mail, House, MessageSquareText, Send } from 'lucide-react';
+import {
+  Github,
+  Linkedin,
+  Instagram,
+  Mail,
+  House,
+  MessageSquareText,
+  Send,
+} from 'lucide-react';
 
 export const socialMediaItems = [
   {
@@ -34,5 +42,26 @@ export const navbarItems = [
     name: 'Contact',
     link: '/contact',
     icon: Send,
+  },
+];
+
+export const projectItems = [
+  {
+    id: 1,
+    label: 'Personal Website',
+    image: 'personal-web.png',
+    tech: 'typescript',
+    summary: 'a digital space that showcases my best works, backgrounds, etc.',
+    tags: ['NextJS', 'Tailwind'],
+    link: 'https://mrayhanr.my.id',
+  },
+  {
+    id: 2,
+    label: 'Personal Website',
+    image: 'personal-web.png',
+    tech: 'typescript',
+    summary: 'a digital space that showcases my best works, backgrounds, etc.',
+    tags: ['NextJS', 'Tailwind'],
+    link: 'https://mrayhanr.my.id',
   },
 ];
