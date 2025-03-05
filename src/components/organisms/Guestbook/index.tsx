@@ -1,6 +1,5 @@
 'use client';
 import Giscus from '@giscus/react';
-import React from 'react';
 
 const GuestBook = () => {
   return (

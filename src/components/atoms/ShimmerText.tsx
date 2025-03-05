@@ -13,12 +13,12 @@ const ShimmerText = ({
 
   return (
     <div
-      className={`inline-block ${
+      className={`inline-block font-bold text-transparent ${
         disabled ? '' : 'animate-shine'
       } ${className}`}
       style={{
         backgroundImage:
-          'linear-gradient(120deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 60%)',
+          'linear-gradient(120deg, #8fdc5f 30%, #ffffff 50%, #8fdc5f 70%)',
         backgroundSize: '200% 100%',
         WebkitBackgroundClip: 'text',
         animationDuration: animationDuration,

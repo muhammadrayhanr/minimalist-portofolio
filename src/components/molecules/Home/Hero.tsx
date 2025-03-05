@@ -2,18 +2,17 @@ import GithubCalendar from '@/components/atoms/GithubCalendar';
 import { Spotlight } from '@/components/ui/spotlight';
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 import Image from 'next/image';
-import React from 'react';
 
 const Hero = () => {
   const words = `Front End Developer`;
   return (
     <section>
       <Spotlight
-        className='-top-28 -left-20 md:left-60 md:-top-20'
+        className='-top-28 -left-20 hidden sm:block sm:left-60 sm:-top-20'
         fill='white'
       />
-      <div className='flex justify-between flex-col-reverse md:flex-row'>
-        <div className='mt-8 md:mt-4 space-y-5 md:w-2/3'>
+      <div className='flex justify-between flex-col-reverse sm:flex-row'>
+        <div className='mt-8 sm:mt-4 space-y-5 sm:w-2/3'>
           <div>
             <h1 className='text-2xl font-bold text-white'>M Rayhan Rohadi</h1>
             <TextGenerateEffect words={words} duration={1} />
@@ -24,7 +23,7 @@ const Hero = () => {
             efficient, and maintainable code.
           </p>
         </div>
-        <div className='relative md:mt-4'>
+        <div className='relative sm:mt-4'>
           <div className='relative'>
             <Image
               src={'/assets/profile.png'}
@@ -45,7 +44,7 @@ const Hero = () => {
             viewBox='0 0 102 28'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
-            className='absolute z-10 left-36 -rotate-[130deg] bottom-6 md:rotate-0 md:bottom-0 md:-left-28'
+            className='absolute z-10 left-36 -rotate-[130deg] bottom-6 sm:rotate-0 sm:bottom-0 sm:-left-28'
           >
             <path
               fillRule='evenodd'

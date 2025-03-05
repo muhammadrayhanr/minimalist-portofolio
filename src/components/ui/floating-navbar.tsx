@@ -34,15 +34,15 @@ export const FloatingNav = ({
     <AnimatePresence mode='wait'>
       <motion.div
         className={cn(
-          'w-fit mx-auto fixed top-3 md:top-0 inset-x-0 rounded-full bg-18181b z-[5000] py-2 transition-all duration-100',
+          'w-fit mx-auto fixed top-3 sm:top-0 inset-x-0 rounded-full bg-18181b z-[5000] py-2 transition-all duration-100',
           isScrolled
-            ? 'backdrop-blur-md border border-[#252529] md:w-1/3 md:top-1 md:rounded-full'
-            : 'backdrop-blur-none border border-transparent md:w-full md:rounded-none',
+            ? 'backdrop-blur-md border border-[#252529] sm:w-1/2 sm:top-1 sm:rounded-full'
+            : 'backdrop-blur-none border border-transparent sm:w-full sm:rounded-none',
           className
         )}
       >
-        <div className='flex max-w-3xl inset-x-0 mx-auto px-8 py-3 space-x-1 items-center justify-center md:justify-between'>
-          <Link href={'/'} className='hidden md:block'>
+        <div className='flex max-w-6xl inset-x-0 mx-auto px-8 py-3 space-x-1 items-center justify-center sm:justify-between'>
+          <Link href={'/'} className='hidden sm:block'>
             <Image
               src={'/assets/logo-white.svg'}
               alt='logo'
@@ -56,7 +56,7 @@ export const FloatingNav = ({
                 key={`link=${idx}`}
                 href={navItem.link}
                 className={cn(
-                  'text-neutral-50 hover:text-neutral-300 px-4 md:px-3',
+                  'text-neutral-50 hover:text-neutral-300 px-4 sm:px-3',
                   pathname === navItem.link
                     ? 'underline underline-offset-2 text-white'
                     : ''
