@@ -1,5 +1,5 @@
 import GithubCalendar from '@/components/atoms/GithubCalendar';
-import { Spotlight } from '@/components/ui/spotlight';
+// import { Spotlight } from '@/components/ui/spotlight';
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 import Image from 'next/image';
 
@@ -7,10 +7,10 @@ const Hero = () => {
   const words = `Front End Developer`;
   return (
     <section>
-      <Spotlight
+      {/* <Spotlight
         className='-top-28 -left-20 hidden sm:block sm:left-60 sm:-top-20'
         fill='white'
-      />
+      /> */}
       <div className='flex justify-between flex-col-reverse sm:flex-row'>
         <div className='mt-8 sm:mt-4 space-y-5 sm:w-2/3'>
           <div>
