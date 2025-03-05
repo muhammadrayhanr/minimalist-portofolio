@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Grotesk } from '@/lib/font';
+import { Toaster } from '@/components/atoms/Toaster';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mrayhanr.my.id'),
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${Grotesk.className} antialiased`}>
         {children}
+        <Toaster />
       </body>
     </html>
   );
