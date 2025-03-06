@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Projects() {
   return (
-    <section className='mx-5'>
+    <section className='sm:mx-5'>
       <HeaderSection text='projects' />
       <div className='grid gap-2'>
         {projectItems.map((p) => {

@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Hero = () => {
   const words = `Front End Developer`;
   return (
-    <section className='mx-5'>
+    <section className='sm:mx-5'>
       <div className='flex justify-between flex-col-reverse sm:flex-row'>
         <div className='mt-8 sm:mt-4 space-y-5 sm:w-2/3'>
           <div>

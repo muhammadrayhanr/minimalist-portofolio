@@ -7,7 +7,7 @@ const About = () => {
   const [showList, setShowList] = useState(false);
 
   return (
-    <section className='mx-5'>
+    <section className='sm:mx-5'>
       <HeaderSection text='about' />
 
       <div className='space-y-8'>

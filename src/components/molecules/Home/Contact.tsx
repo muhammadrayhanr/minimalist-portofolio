@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Contact = () => {
   return (
-    <section>
+    <section className='sm:mx-5'>
       <SpotlightCard>
         <div className='flex flex-col justify-center items-center w-full'>
           <span className='flex items-center mb-4 rounded-full bg-[#B5FF6D]/10 px-2 py-1 text-xs'>
