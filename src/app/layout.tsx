@@ -3,6 +3,8 @@ import './globals.css';
 import { Grotesk } from '@/lib/font';
 import { Toaster } from '@/components/atoms/Toaster';
 import { ThemeProvider } from 'next-themes';
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mrayhanr.my.id'),
@@ -30,7 +32,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={`${Grotesk.className} antialiased`} suppressHydrationWarning>
+      <body
+        className={`${Grotesk.className} antialiased`}
+        suppressHydrationWarning
+      >
+        <Analytics />
+        <SpeedInsights />
         <ThemeProvider
           attribute='class'
           storageKey='nightwind-mode'
