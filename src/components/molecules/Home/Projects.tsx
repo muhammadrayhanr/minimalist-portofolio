@@ -3,7 +3,6 @@ import { projectItems } from '@/lib/mock';
 import { LinkIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 
 export default function Projects() {
   return (

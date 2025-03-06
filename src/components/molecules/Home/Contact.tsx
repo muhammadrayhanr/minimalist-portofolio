@@ -2,7 +2,6 @@ import SocialMedia from '@/components/atoms/SocialMedia';
 import SpotlightCard from '@/components/ui/spotlight-card';
 import { Dot } from 'lucide-react';
 import Link from 'next/link';
-import React from 'react';
 
 const Contact = () => {
   return (

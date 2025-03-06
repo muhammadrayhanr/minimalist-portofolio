@@ -1,5 +1,4 @@
 import { SparkleIcon } from 'lucide-react';
-import React from 'react';
 import ShimmerText from '@/components/atoms/ShimmerText';
 
 const HeaderSection = ({ text }: { text: string }) => {

@@ -30,11 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={`${Grotesk.className} antialiased`}>
+      <body className={`${Grotesk.className} antialiased`} suppressHydrationWarning>
         <ThemeProvider
           attribute='class'
           storageKey='nightwind-mode'
-          defaultTheme='system'
+          defaultTheme='dark'
         >
           {children}
           <Toaster />

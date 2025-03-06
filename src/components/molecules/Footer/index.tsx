@@ -1,5 +1,4 @@
 import SocialMedia from '@/components/atoms/SocialMedia';
-import React from 'react';
 
 const Footer = () => {
   return (
