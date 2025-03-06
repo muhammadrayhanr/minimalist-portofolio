@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Grotesk } from '@/lib/font';
 import { Toaster } from '@/components/atoms/Toaster';
+import { ThemeProvider } from 'next-themes';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mrayhanr.my.id'),
@@ -28,10 +29,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body className={`${Grotesk.className} antialiased`}>
-        {children}
-        <Toaster />
+        <ThemeProvider
+          attribute='class'
+          storageKey='nightwind-mode'
+          defaultTheme='system'
+        >
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

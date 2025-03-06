@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Hero = () => {
   const words = `Front End Developer`;
   return (
-    <section>
+    <section className='mx-5'>
       {/* <Spotlight
         className='-top-28 -left-20 hidden sm:block sm:left-60 sm:-top-20'
         fill='white'
@@ -14,7 +14,7 @@ const Hero = () => {
       <div className='flex justify-between flex-col-reverse sm:flex-row'>
         <div className='mt-8 sm:mt-4 space-y-5 sm:w-2/3'>
           <div>
-            <h1 className='text-2xl font-bold text-white'>M Rayhan Rohadi</h1>
+            <h1 className='text-2xl font-bold'>M Rayhan Rohadi</h1>
             <TextGenerateEffect words={words} duration={1} />
           </div>
           <p className='text-sm'>
@@ -33,7 +33,7 @@ const Hero = () => {
               className='rounded-full grayscale hover:grayscale-0 duration-150'
             />
             <div className='absolute top-0 -rotate-12'>
-              <div className='px-1 bg-[#26A641] w-fit rounded-sm border-[2.5px] border-[#006D32] '>
+              <div className='px-1 bg-[#26A641] w-fit text-white dark:text-neutral-900 rounded-sm border-[2.5px] border-[#006D32] '>
                 heya!
               </div>
             </div>
@@ -55,7 +55,7 @@ const Hero = () => {
           </svg>
         </div>
       </div>
-      <div className='bg-[#18181b] border border-[#252529] p-5 rounded mt-10'>
+      <div className='bg-neutral-100 dark:bg-[#18181b] border dark:border-[#252529] p-5 rounded mt-10'>
         <GithubCalendar />
       </div>
     </section>

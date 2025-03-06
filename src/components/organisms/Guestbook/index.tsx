@@ -1,7 +1,10 @@
 'use client';
 import Giscus from '@giscus/react';
+import { useTheme } from 'next-themes';
 
 const GuestBook = () => {
+  const { theme } = useTheme();
+
   return (
     <section>
       <Giscus
@@ -14,7 +17,7 @@ const GuestBook = () => {
         reactionsEnabled='1'
         emitMetadata='1'
         inputPosition='top'
-        theme='dark'
+        theme={theme === 'dark' ? 'dark' : 'light'}
         lang='en'
         loading='lazy'
       />

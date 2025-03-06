@@ -89,8 +89,7 @@ const ContactPage = () => {
           )}
           <button
             type='submit'
-            className='text-sm mt-7 px-7 py-2 rounded-full bg-white text-black border border-white 
-    hover:bg-transparent hover:text-white transition-all duration-600 disabled:opacity-50 disabled:cursor-not-allowed'
+            className='text-sm mt-7 px-7 py-2 rounded-full bg-black dark:bg-neutral-900 text-white dark:text-neutral-50 border border-black dark:border-white dark:hover:border-neutral-900 hover:bg-white dark:hover:bg-neutral-50 hover:text-black dark:hover:text-neutral-900 transition-all duration-600 disabled:opacity-50 disabled:cursor-not-allowed'
             disabled={!isValid}
           >
             Submit

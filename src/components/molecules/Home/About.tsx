@@ -7,7 +7,7 @@ const About = () => {
   const [showList, setShowList] = useState(false);
 
   return (
-    <section>
+    <section className='mx-5'>
       <HeaderSection text='about' />
 
       <div className='space-y-8'>
@@ -53,7 +53,7 @@ const About = () => {
         </AnimatePresence>
 
         <button
-          className='w-full bg-transparent text-white py-1 text-xs mt-2'
+          className='w-full bg-transparent py-1 text-xs mt-2'
           onClick={() => setShowList(!showList)}
         >
           {showList ? 'See Less' : 'See More'}
