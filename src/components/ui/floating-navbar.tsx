@@ -10,6 +10,8 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import Toggle from '../atoms/Toggle';
+import { useTheme } from 'next-themes';
 
 export const FloatingNav = ({
   navItems,
@@ -26,6 +28,8 @@ export const FloatingNav = ({
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
+  const { theme } = useTheme();
+
   useMotionValueEvent(scrollY, 'change', (latest) => {
     setIsScrolled(latest > 10);
   });
@@ -34,17 +38,17 @@ export const FloatingNav = ({
     <AnimatePresence mode='wait'>
       <motion.div
         className={cn(
-          'w-fit mx-auto fixed top-3 sm:top-0 inset-x-0 rounded-full bg-18181b z-[5000] py-2 transition-all duration-100',
+          'mx-auto fixed top-3 sm:top-0 inset-x-0 rounded-full z-[5000] py-2',
           isScrolled
-            ? 'backdrop-blur-md border border-[#252529] sm:w-1/2 sm:top-1 sm:rounded-full'
-            : 'backdrop-blur-none border border-transparent sm:w-full sm:rounded-none',
+            ? 'bg-white dark:bg-neutral-50 border border-gray-700 dark:border-neutral-100 w-fit sm:top-1 sm:rounded-full'
+            : 'w-full sm:rounded-none',
           className
         )}
       >
-        <div className='flex max-w-6xl inset-x-0 mx-auto px-8 py-3 space-x-1 items-center justify-center sm:justify-between'>
-          <Link href={'/'} className='hidden sm:block'>
+        <div className='flex gap-10 max-w-6xl inset-x-0 mx-auto px-8 py-3 space-x-1 items-center justify-between'>
+          <Link href={'/'}>
             <Image
-              src={'/assets/logo-white.svg'}
+              src={theme === 'dark' ? '/assets/logo-white.svg' : '/assets/logo-black.svg'}
               alt='logo'
               width={25}
               height={25}
@@ -56,20 +60,21 @@ export const FloatingNav = ({
                 key={`link=${idx}`}
                 href={navItem.link}
                 className={cn(
-                  'text-neutral-50 hover:text-neutral-300 px-4 sm:px-3',
+                  'px-4 sm:px-3',
                   pathname === navItem.link
-                    ? 'underline underline-offset-2 text-white'
+                    ? 'underline underline-offset-2'
                     : ''
                 )}
               >
                 {navItem.icon &&
                   React.createElement(navItem.icon, {
-                    className: 'w-5 h-5 block sm:hidden',
+                    className: 'w-5 h-5 hidden',
                   })}
                 <span className='hidden sm:block text-sm'>{navItem.name}</span>
               </Link>
             ))}
           </div>
+          <Toggle />
         </div>
       </motion.div>
     </AnimatePresence>

@@ -18,6 +18,7 @@
     "motion": "^12.4.7",
     "next": "15.2.0",
     "next-themes": "^0.4.4",
+    "nightwind": "^1.1.13",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-github-calendar": "^4.5.5",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/nightwind": "^1.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
