@@ -46,14 +46,23 @@ export const navbarItems = [
 ];
 
 export const projectItems = [
+  // {
+  //   id: 1,
+  //   label: 'Personal Website',
+  //   image: 'personal-web.png',
+  //   tech: 'typescript',
+  //   summary: 'a digital space that showcases my best works, backgrounds, etc.',
+  //   tags: ['NextJS'],
+  //   link: 'https://mrayhanr.my.id',
+  // },
   {
     id: 1,
-    label: 'Personal Website',
-    image: 'personal-web.png',
+    label: 'Book Wise',
+    image: 'book-wise.png',
     tech: 'typescript',
-    summary: 'a digital space that showcases my best works, backgrounds, etc.',
-    tags: ['NextJS', 'Tailwind'],
-    link: 'https://mrayhanr.my.id',
+    summary: 'a University Library where student can borrow books with authorization.',
+    tags: ['NextJS', 'Neon', 'Drizzle', 'Postgresql'],
+    link: 'https://borrow-book-library.vercel.app',
   },
   {
     id: 2,
@@ -61,7 +70,7 @@ export const projectItems = [
     image: 'dicoding-forum.png',
     tech: 'javascript',
     summary: 'a forum that I create as my final project at Dicoding.',
-    tags: ['ReactJS', 'Tailwind'],
+    tags: ['ReactJS', 'Redux'],
     link: 'https://dicoding-forum-mrayhanr.vercel.app',
   },
   {
@@ -70,7 +79,7 @@ export const projectItems = [
     image: 'sant-ai.png',
     tech: 'javascript',
     summary: 'a ChatGPT clone that I create using Gemini.',
-    tags: ['NextJS', 'Tailwind', 'Gemini'],
+    tags: ['NextJS', 'Gemini'],
     link: 'https://chat-santai.vercel.app',
   },
 ];
