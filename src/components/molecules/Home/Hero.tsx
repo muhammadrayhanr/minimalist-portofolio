@@ -3,7 +3,7 @@ import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 import Image from 'next/image';
 
 const Hero = () => {
-  const words = `Front End Developer`;
+  const words = `Web Developer`;
   return (
     <section className='sm:mx-5'>
       <div className='flex justify-between flex-col-reverse sm:flex-row'>
@@ -13,7 +13,7 @@ const Hero = () => {
             <TextGenerateEffect words={words} duration={1} />
           </div>
           <p className='text-sm'>
-            I&#39;m a front end developer specializing in building responsive
+            I&#39;m a web developer specializing in building responsive
             and user-friendly web applications. My focus is on creating clean,
             efficient, and maintainable code.
           </p>

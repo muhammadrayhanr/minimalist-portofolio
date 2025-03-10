@@ -17,7 +17,7 @@ const About = () => {
           learn something new and be curious of how things work.
           <span className='underline'>
             {' '}
-            A Front End Developer who loves to create and learn new things.
+            A Web Developer who loves to create and learn new things.
           </span>
         </p>
 
